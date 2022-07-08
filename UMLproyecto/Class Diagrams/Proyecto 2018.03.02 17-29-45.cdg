@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Proyecto">
+  <ClassDiagramComponents>
+    <Class name="Atabash" package="proyecto" visibility="public" xPosition="1631.0" yPosition="499.0">
+      <Fields>
+        <Field name="abecedario" type="char[]" visibility="private"/>
+        <Field name="abecedariomayusculas" type="char[]" visibility="private"/>
+        <Field name="mensajeaux" type="char[]" visibility="private"/>
+        <Field name="codificacion" type="String" visibility="private"/>
+        <Field name="x" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Cifrar" returnType="void" visibility="public"/>
+        <Method name="Descifrar" returnType="void" visibility="public"/>
+        <Method name="setAbecedario" returnType="void" visibility="public"/>
+        <Method name="setAbecedarioMayusculas" returnType="void" visibility="public"/>
+        <Method name="setAbecedarioModificado" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="setAbecedarioModificadoMinusculas" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getAbecedario" returnType="char[]" visibility="public"/>
+        <Method name="getAbecedariomodificado" returnType="char[]" visibility="public"/>
+        <Method name="getAbecedariomayusculas" returnType="char[]" visibility="public"/>
+        <Method name="getAbecedariomodificadominusculas" returnType="char[]" visibility="public"/>
+        <Method name="getCodificacion" returnType="String" visibility="public"/>
+        <Method name="getDecodificacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cesar" package="proyecto" visibility="public" xPosition="759.0" yPosition="445.0">
+      <Fields>
+        <Field name="abecedario" type="char[]" visibility="private"/>
+        <Field name="abecedariomayusculas" type="char[]" visibility="private"/>
+        <Field name="mensajeaux" type="char[]" visibility="private"/>
+        <Field name="codificacion" type="String" visibility="private"/>
+        <Field name="x" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Cifrar" returnType="void" visibility="public"/>
+        <Method name="Descifrar" returnType="void" visibility="public"/>
+        <Method name="setAbecedario" returnType="void" visibility="public"/>
+        <Method name="setAbecedarioMayusculas" returnType="void" visibility="public"/>
+        <Method name="setAbecedarioModificado" returnType="void" visibility="public">
+          <Argument type="int" name="opcion"/>
+        </Method>
+        <Method name="setAbecedarioModificadoMinusculas" returnType="void" visibility="public">
+          <Argument type="int" name="opcion"/>
+        </Method>
+        <Method name="getAbecedario" returnType="char[]" visibility="public"/>
+        <Method name="getAbecedariomodificado" returnType="char[]" visibility="public"/>
+        <Method name="getAbecedariomayusculas" returnType="char[]" visibility="public"/>
+        <Method name="getAbecedariomodificadominusculas" returnType="char[]" visibility="public"/>
+        <Method name="getCodificacion" returnType="String" visibility="public"/>
+        <Method name="getDecodificacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Criptografia" package="proyecto" visibility="public" isAbstract="true" xPosition="1199.0" yPosition="152.0">
+      <Fields>
+        <Field name="tipo" type="String" visibility="protected"/>
+        <Field name="textoplano" type="String" visibility="protected"/>
+        <Field name="mensaje" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipo" returnType="String" visibility="public"/>
+        <Method name="setTipo" returnType="void" visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Method>
+        <Method name="getTextoplano" returnType="String" visibility="public"/>
+        <Method name="setTextoplano" returnType="void" visibility="public">
+          <Argument type="String" name="textoplano"/>
+        </Method>
+        <Method name="getMensaje" returnType="String" visibility="public"/>
+        <Method name="setMensaje" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+        <Method name="setMensajeOriginal" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+        <Method name="Cifrar" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="Descifrar" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Proyecto" package="proyecto" visibility="public" xPosition="1232.0" yPosition="9.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Texto" package="proyecto" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="mensaje" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMensaje" returnType="String" visibility="public"/>
+        <Method name="setMensaje" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+        <Method name="QuitarBlancos" returnType="void" visibility="public"/>
+        <Method name="PasarMayusculas" returnType="String" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+        <Method name="PasarMinusculas" returnType="String" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TextoCifrado" package="proyecto" visibility="public" xPosition="2079.0" yPosition="271.0">
+      <Fields>
+        <Field name="criptografia" type="Criptografia" visibility="package"/>
+        <Field name="textoplano" type="String" visibility="private"/>
+        <Field name="textocifrado" type="String" visibility="private"/>
+        <Field name="cripto" type="Criptografia" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTextoplano" returnType="String" visibility="public"/>
+        <Method name="setTextoplano" returnType="void" visibility="public">
+          <Argument type="String" name="textoplano"/>
+        </Method>
+        <Method name="getTextocifrado" returnType="String" visibility="public"/>
+        <Method name="setTextocifrado" returnType="void" visibility="public">
+          <Argument type="String" name="textocifrado"/>
+        </Method>
+        <Method name="setCriptografia" returnType="void" visibility="public">
+          <Argument type="Criptografia" name="criptografia"/>
+        </Method>
+        <Method name="getCriptografia" returnType="Criptografia" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TranspocicionColumnar" package="proyecto" visibility="public" xPosition="520.0" yPosition="77.0">
+      <Fields>
+        <Field name="r" type="int" visibility="private"/>
+        <Field name="matriz" type="char[][]" visibility="private"/>
+        <Field name="textoplano" type="String" visibility="private"/>
+        <Field name="fraseaux" type="char" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setMatriz" returnType="void" visibility="public"/>
+        <Method name="Cifrar" returnType="void" visibility="public"/>
+        <Method name="Descifrar" returnType="void" visibility="public"/>
+        <Method name="setR" returnType="void" visibility="public">
+          <Argument type="int" name="r"/>
+        </Method>
+        <Method name="setC" returnType="void" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getMatriz" returnType="char[][]" visibility="public"/>
+        <Method name="setMatrizCodice" returnType="void" visibility="public"/>
+        <Method name="setMatrizCodificacion" returnType="void" visibility="public"/>
+        <Method name="getCodificacion" returnType="String" visibility="public"/>
+        <Method name="getDecodificacion" returnType="String" visibility="public"/>
+        <Method name="setCodiceaux" returnType="void" visibility="public"/>
+        <Method name="getCodiceaux" returnType="char[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Arreglos" package="proyecto" visibility="public" xPosition="1168.0" yPosition="583.0">
+      <Methods>
+        <Method name="setAbecedario" returnType="void" visibility="public"/>
+        <Method name="setAbecedarioModificado" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="setAbecedarioMayusculas" returnType="void" visibility="public"/>
+        <Method name="setAbecedarioModificadoMinusculas" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Matriz" package="proyecto" visibility="public" xPosition="532.0" yPosition="621.0">
+      <Methods>
+        <Method name="setMatriz" returnType="void" visibility="public"/>
+        <Method name="setMatrizCodice" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="proyecto.TextoCifrado" target="proyecto.Texto"/>
+    <UseRelation source="proyecto.TextoCifrado" target="proyecto.Criptografia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyecto.TranspocicionColumnar" target="proyecto.Matriz"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyecto.Cesar" target="proyecto.Arreglos"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyecto.Atabash" target="proyecto.Arreglos"/>
+    <IsRelation name="is" source="proyecto.Atabash" target="proyecto.Criptografia"/>
+    <IsRelation name="is" source="proyecto.TranspocicionColumnar" target="proyecto.Criptografia"/>
+    <IsRelation name="is" source="proyecto.Cesar" target="proyecto.Criptografia"/>
+    <HasRelation name="criptografia" source="proyecto.TextoCifrado" target="proyecto.Criptografia" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cripto" source="proyecto.TextoCifrado" target="proyecto.Criptografia" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
